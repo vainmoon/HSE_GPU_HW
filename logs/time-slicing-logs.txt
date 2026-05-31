@@ -1,0 +1,163 @@
+===== torch-benchmark-ts-1 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-ts-1-j9jcw
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-ts-1-j9jcw, step=20, elapsed_sec=26.9, last_step_sec=1.417227
+pod=torch-benchmark-ts-1-j9jcw, step=40, elapsed_sec=54.5, last_step_sec=1.377588
+pod=torch-benchmark-ts-1-j9jcw, step=60, elapsed_sec=82.0, last_step_sec=1.412273
+pod=torch-benchmark-ts-1-j9jcw, step=80, elapsed_sec=109.8, last_step_sec=1.399171
+pod=torch-benchmark-ts-1-j9jcw, step=100, elapsed_sec=137.5, last_step_sec=1.449283
+pod=torch-benchmark-ts-1-j9jcw, step=120, elapsed_sec=165.1, last_step_sec=1.378327
+pod=torch-benchmark-ts-1-j9jcw, step=140, elapsed_sec=193.0, last_step_sec=1.390568
+pod=torch-benchmark-ts-1-j9jcw, step=160, elapsed_sec=220.6, last_step_sec=1.359356
+pod=torch-benchmark-ts-1-j9jcw, step=180, elapsed_sec=248.2, last_step_sec=1.368827
+pod=torch-benchmark-ts-1-j9jcw, step=200, elapsed_sec=275.9, last_step_sec=1.410320
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-ts-1-j9jcw
+steps              : 218
+total_time_sec     : 300.746394
+avg_step_sec       : 1.379561
+min_step_sec       : 1.018178
+max_step_sec       : 1.459004
+median_step_sec    : 1.379113
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-ts-2 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-ts-2-l9ksr
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-ts-2-l9ksr, step=20, elapsed_sec=26.9, last_step_sec=1.429695
+pod=torch-benchmark-ts-2-l9ksr, step=40, elapsed_sec=54.5, last_step_sec=1.377412
+pod=torch-benchmark-ts-2-l9ksr, step=60, elapsed_sec=82.1, last_step_sec=1.378491
+pod=torch-benchmark-ts-2-l9ksr, step=80, elapsed_sec=109.9, last_step_sec=1.398164
+pod=torch-benchmark-ts-2-l9ksr, step=100, elapsed_sec=137.7, last_step_sec=1.388264
+pod=torch-benchmark-ts-2-l9ksr, step=120, elapsed_sec=165.3, last_step_sec=1.399529
+pod=torch-benchmark-ts-2-l9ksr, step=140, elapsed_sec=193.2, last_step_sec=1.369682
+pod=torch-benchmark-ts-2-l9ksr, step=160, elapsed_sec=220.8, last_step_sec=1.378385
+pod=torch-benchmark-ts-2-l9ksr, step=180, elapsed_sec=248.4, last_step_sec=1.368336
+pod=torch-benchmark-ts-2-l9ksr, step=200, elapsed_sec=276.2, last_step_sec=1.397419
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-ts-2-l9ksr
+steps              : 218
+total_time_sec     : 300.806687
+avg_step_sec       : 1.379838
+min_step_sec       : 1.034196
+max_step_sec       : 1.470798
+median_step_sec    : 1.378819
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-ts-3 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-ts-3-gh96n
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-ts-3-gh96n, step=20, elapsed_sec=26.9, last_step_sec=1.420222
+pod=torch-benchmark-ts-3-gh96n, step=40, elapsed_sec=54.5, last_step_sec=1.388058
+pod=torch-benchmark-ts-3-gh96n, step=60, elapsed_sec=82.0, last_step_sec=1.389969
+pod=torch-benchmark-ts-3-gh96n, step=80, elapsed_sec=109.8, last_step_sec=1.408420
+pod=torch-benchmark-ts-3-gh96n, step=100, elapsed_sec=137.6, last_step_sec=1.397783
+pod=torch-benchmark-ts-3-gh96n, step=120, elapsed_sec=165.2, last_step_sec=1.389560
+pod=torch-benchmark-ts-3-gh96n, step=140, elapsed_sec=193.1, last_step_sec=1.368028
+pod=torch-benchmark-ts-3-gh96n, step=160, elapsed_sec=220.7, last_step_sec=1.369442
+pod=torch-benchmark-ts-3-gh96n, step=180, elapsed_sec=248.3, last_step_sec=1.369001
+pod=torch-benchmark-ts-3-gh96n, step=200, elapsed_sec=276.1, last_step_sec=1.398501
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-ts-3-gh96n
+steps              : 218
+total_time_sec     : 300.793129
+avg_step_sec       : 1.379776
+min_step_sec       : 1.027032
+max_step_sec       : 1.479405
+median_step_sec    : 1.379430
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-ts-4 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-ts-4-vrhgn
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-ts-4-vrhgn, step=20, elapsed_sec=27.7, last_step_sec=1.368067
+pod=torch-benchmark-ts-4-vrhgn, step=40, elapsed_sec=55.2, last_step_sec=1.359356
+pod=torch-benchmark-ts-4-vrhgn, step=60, elapsed_sec=83.0, last_step_sec=1.377399
+pod=torch-benchmark-ts-4-vrhgn, step=80, elapsed_sec=110.7, last_step_sec=1.368800
+pod=torch-benchmark-ts-4-vrhgn, step=100, elapsed_sec=138.3, last_step_sec=1.388678
+pod=torch-benchmark-ts-4-vrhgn, step=120, elapsed_sec=166.2, last_step_sec=1.366833
+pod=torch-benchmark-ts-4-vrhgn, step=140, elapsed_sec=193.8, last_step_sec=1.418731
+pod=torch-benchmark-ts-4-vrhgn, step=160, elapsed_sec=221.3, last_step_sec=1.349352
+pod=torch-benchmark-ts-4-vrhgn, step=180, elapsed_sec=249.1, last_step_sec=1.398372
+pod=torch-benchmark-ts-4-vrhgn, step=200, elapsed_sec=276.7, last_step_sec=1.378559
+pod=torch-benchmark-ts-4-vrhgn, step=220, elapsed_sec=284.1, last_step_sec=0.303097
+pod=torch-benchmark-ts-4-vrhgn, step=240, elapsed_sec=290.2, last_step_sec=0.304941
+pod=torch-benchmark-ts-4-vrhgn, step=260, elapsed_sec=296.3, last_step_sec=0.303037
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-ts-4-vrhgn
+steps              : 273
+total_time_sec     : 300.240199
+avg_step_sec       : 1.099772
+min_step_sec       : 0.302671
+max_step_sec       : 1.460675
+median_step_sec    : 1.371000
+peak_cuda_mem_gb   : 1.008
+======================================================================
+

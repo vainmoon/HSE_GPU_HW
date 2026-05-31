@@ -1,0 +1,77 @@
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+step=20, elapsed_sec=5.1, last_step_sec=0.255594
+step=40, elapsed_sec=10.3, last_step_sec=0.255900
+step=60, elapsed_sec=15.4, last_step_sec=0.256260
+step=80, elapsed_sec=20.6, last_step_sec=0.259258
+step=100, elapsed_sec=25.8, last_step_sec=0.260084
+step=120, elapsed_sec=31.1, last_step_sec=0.264411
+step=140, elapsed_sec=36.3, last_step_sec=0.264766
+step=160, elapsed_sec=41.6, last_step_sec=0.264329
+step=180, elapsed_sec=46.9, last_step_sec=0.266945
+step=200, elapsed_sec=52.3, last_step_sec=0.269949
+step=220, elapsed_sec=57.7, last_step_sec=0.270360
+step=240, elapsed_sec=63.1, last_step_sec=0.274676
+step=260, elapsed_sec=68.6, last_step_sec=0.275362
+step=280, elapsed_sec=74.2, last_step_sec=0.278533
+step=300, elapsed_sec=79.8, last_step_sec=0.280698
+step=320, elapsed_sec=85.3, last_step_sec=0.278333
+step=340, elapsed_sec=90.9, last_step_sec=0.280298
+step=360, elapsed_sec=96.5, last_step_sec=0.280706
+step=380, elapsed_sec=102.2, last_step_sec=0.284950
+step=400, elapsed_sec=107.9, last_step_sec=0.285378
+step=420, elapsed_sec=113.6, last_step_sec=0.287426
+step=440, elapsed_sec=119.4, last_step_sec=0.289777
+step=460, elapsed_sec=125.2, last_step_sec=0.291047
+step=480, elapsed_sec=131.0, last_step_sec=0.291410
+step=500, elapsed_sec=136.8, last_step_sec=0.291410
+step=520, elapsed_sec=142.6, last_step_sec=0.291410
+step=540, elapsed_sec=148.5, last_step_sec=0.293441
+step=560, elapsed_sec=154.4, last_step_sec=0.293448
+step=580, elapsed_sec=160.3, last_step_sec=0.294972
+step=600, elapsed_sec=166.2, last_step_sec=0.296137
+step=620, elapsed_sec=172.1, last_step_sec=0.296950
+step=640, elapsed_sec=178.1, last_step_sec=0.296990
+step=660, elapsed_sec=184.0, last_step_sec=0.297779
+step=680, elapsed_sec=190.0, last_step_sec=0.297767
+step=700, elapsed_sec=195.9, last_step_sec=0.296959
+step=720, elapsed_sec=201.9, last_step_sec=0.297773
+step=740, elapsed_sec=207.8, last_step_sec=0.298572
+step=760, elapsed_sec=213.8, last_step_sec=0.297352
+step=780, elapsed_sec=219.7, last_step_sec=0.299392
+step=800, elapsed_sec=225.7, last_step_sec=0.298965
+step=820, elapsed_sec=231.7, last_step_sec=0.298512
+step=840, elapsed_sec=237.7, last_step_sec=0.299401
+step=860, elapsed_sec=243.7, last_step_sec=0.299382
+step=880, elapsed_sec=249.7, last_step_sec=0.300160
+step=900, elapsed_sec=255.7, last_step_sec=0.301343
+step=920, elapsed_sec=261.7, last_step_sec=0.301387
+step=940, elapsed_sec=267.8, last_step_sec=0.301829
+step=960, elapsed_sec=273.8, last_step_sec=0.301852
+step=980, elapsed_sec=279.8, last_step_sec=0.302253
+step=1000, elapsed_sec=285.9, last_step_sec=0.301820
+step=1020, elapsed_sec=291.9, last_step_sec=0.301828
+step=1040, elapsed_sec=298.0, last_step_sec=0.301827
+======================================================================
+Benchmark results
+======================================================================
+steps              : 1047
+total_time_sec     : 300.076601
+avg_step_sec       : 0.286597
+min_step_sec       : 0.253166
+max_step_sec       : 0.303507
+median_step_sec    : 0.292198
+peak_cuda_mem_gb   : 1.008
+======================================================================

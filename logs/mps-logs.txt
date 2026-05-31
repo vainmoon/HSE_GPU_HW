@@ -1,0 +1,152 @@
+===== torch-benchmark-mps-1 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-mps-1-m9qkv
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-mps-1-m9qkv, step=20, elapsed_sec=32.0, last_step_sec=1.612788
+pod=torch-benchmark-mps-1-m9qkv, step=40, elapsed_sec=65.5, last_step_sec=1.712573
+pod=torch-benchmark-mps-1-m9qkv, step=60, elapsed_sec=100.2, last_step_sec=1.757270
+pod=torch-benchmark-mps-1-m9qkv, step=80, elapsed_sec=135.8, last_step_sec=1.755027
+pod=torch-benchmark-mps-1-m9qkv, step=100, elapsed_sec=171.6, last_step_sec=1.809810
+pod=torch-benchmark-mps-1-m9qkv, step=120, elapsed_sec=207.7, last_step_sec=1.791006
+pod=torch-benchmark-mps-1-m9qkv, step=140, elapsed_sec=243.9, last_step_sec=1.797020
+pod=torch-benchmark-mps-1-m9qkv, step=160, elapsed_sec=280.4, last_step_sec=1.820107
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-mps-1-m9qkv
+steps              : 171
+total_time_sec     : 300.554672
+avg_step_sec       : 1.757620
+min_step_sec       : 1.565355
+max_step_sec       : 1.889372
+median_step_sec    : 1.789369
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-mps-2 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-mps-2-cxn6c
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-mps-2-cxn6c, step=20, elapsed_sec=32.0, last_step_sec=1.612662
+pod=torch-benchmark-mps-2-cxn6c, step=40, elapsed_sec=65.5, last_step_sec=1.712152
+pod=torch-benchmark-mps-2-cxn6c, step=60, elapsed_sec=100.3, last_step_sec=1.757308
+pod=torch-benchmark-mps-2-cxn6c, step=80, elapsed_sec=135.8, last_step_sec=1.754866
+pod=torch-benchmark-mps-2-cxn6c, step=100, elapsed_sec=171.6, last_step_sec=1.809738
+pod=torch-benchmark-mps-2-cxn6c, step=120, elapsed_sec=207.7, last_step_sec=1.789897
+pod=torch-benchmark-mps-2-cxn6c, step=140, elapsed_sec=243.9, last_step_sec=1.797601
+pod=torch-benchmark-mps-2-cxn6c, step=160, elapsed_sec=280.4, last_step_sec=1.819476
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-mps-2-cxn6c
+steps              : 171
+total_time_sec     : 300.550657
+avg_step_sec       : 1.757598
+min_step_sec       : 1.565393
+max_step_sec       : 1.889726
+median_step_sec    : 1.789362
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-mps-3 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-mps-3-v2vgr
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-mps-3-v2vgr, step=20, elapsed_sec=32.0, last_step_sec=1.612508
+pod=torch-benchmark-mps-3-v2vgr, step=40, elapsed_sec=65.5, last_step_sec=1.711911
+pod=torch-benchmark-mps-3-v2vgr, step=60, elapsed_sec=100.2, last_step_sec=1.756876
+pod=torch-benchmark-mps-3-v2vgr, step=80, elapsed_sec=135.8, last_step_sec=1.754619
+pod=torch-benchmark-mps-3-v2vgr, step=100, elapsed_sec=171.6, last_step_sec=1.809560
+pod=torch-benchmark-mps-3-v2vgr, step=120, elapsed_sec=207.7, last_step_sec=1.790327
+pod=torch-benchmark-mps-3-v2vgr, step=140, elapsed_sec=243.9, last_step_sec=1.797618
+pod=torch-benchmark-mps-3-v2vgr, step=160, elapsed_sec=280.3, last_step_sec=1.819740
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-mps-3-v2vgr
+steps              : 171
+total_time_sec     : 300.532250
+avg_step_sec       : 1.757491
+min_step_sec       : 1.564895
+max_step_sec       : 1.889599
+median_step_sec    : 1.789601
+peak_cuda_mem_gb   : 1.008
+======================================================================
+
+===== torch-benchmark-mps-4 =====
+======================================================================
+PyTorch CUDA Matrix Multiplication Benchmark
+Pod name        : torch-benchmark-mps-4-fnnx7
+Mode            : time-slicing/shared
+======================================================================
+GPU name        : Tesla T4
+GPU memory GB   : 14.56
+PyTorch version : 2.5.1+cu124
+CUDA version    : 12.4
+GPU count       : 1
+Matrix size     : 8192 x 8192
+Duration sec    : 300
+Warmup steps    : 10
+======================================================================
+Warmup started...
+Benchmark started...
+pod=torch-benchmark-mps-4-fnnx7, step=20, elapsed_sec=32.0, last_step_sec=1.612855
+pod=torch-benchmark-mps-4-fnnx7, step=40, elapsed_sec=65.5, last_step_sec=1.712019
+pod=torch-benchmark-mps-4-fnnx7, step=60, elapsed_sec=100.3, last_step_sec=1.757192
+pod=torch-benchmark-mps-4-fnnx7, step=80, elapsed_sec=135.8, last_step_sec=1.754967
+pod=torch-benchmark-mps-4-fnnx7, step=100, elapsed_sec=171.6, last_step_sec=1.809509
+pod=torch-benchmark-mps-4-fnnx7, step=120, elapsed_sec=207.7, last_step_sec=1.790164
+pod=torch-benchmark-mps-4-fnnx7, step=140, elapsed_sec=243.9, last_step_sec=1.797547
+pod=torch-benchmark-mps-4-fnnx7, step=160, elapsed_sec=280.4, last_step_sec=1.819759
+======================================================================
+Benchmark results
+======================================================================
+pod_name           : torch-benchmark-mps-4-fnnx7
+steps              : 171
+total_time_sec     : 300.549915
+avg_step_sec       : 1.757594
+min_step_sec       : 1.565243
+max_step_sec       : 1.889811
+median_step_sec    : 1.789416
+peak_cuda_mem_gb   : 1.008
+======================================================================
+

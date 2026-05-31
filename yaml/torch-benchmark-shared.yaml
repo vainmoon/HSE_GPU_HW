@@ -1,0 +1,128 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: torch-benchmark
+  namespace: gpu-lab
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: torch-benchmark
+        mode: time-slicing
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: benchmark
+          image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+          imagePullPolicy: IfNotPresent
+          command:
+            - python
+            - -u
+            - -c
+            - |
+              import os
+              import time
+              import statistics
+              import socket
+              import torch
+
+              pod_name = socket.gethostname()
+
+              print("=" * 70)
+              print("PyTorch CUDA Matrix Multiplication Benchmark")
+              print(f"Pod name        : {pod_name}")
+              print("Mode            : time-slicing/shared")
+              print("=" * 70)
+
+              if not torch.cuda.is_available():
+                  raise RuntimeError("CUDA is not available inside the pod")
+
+              device = torch.device("cuda:0")
+
+              gpu_name = torch.cuda.get_device_name(0)
+              props = torch.cuda.get_device_properties(0)
+              total_mem_gb = props.total_memory / 1024**3
+
+              print(f"GPU name        : {gpu_name}")
+              print(f"GPU memory GB   : {total_mem_gb:.2f}")
+              print(f"PyTorch version : {torch.__version__}")
+              print(f"CUDA version    : {torch.version.cuda}")
+              print(f"GPU count       : {torch.cuda.device_count()}")
+
+              matrix_size = int(os.environ.get("MATRIX_SIZE", "8192"))
+              duration_sec = int(os.environ.get("DURATION_SEC", "300"))
+              warmup_steps = int(os.environ.get("WARMUP_STEPS", "10"))
+
+              print(f"Matrix size     : {matrix_size} x {matrix_size}")
+              print(f"Duration sec    : {duration_sec}")
+              print(f"Warmup steps    : {warmup_steps}")
+              print("=" * 70)
+
+              torch.backends.cuda.matmul.allow_tf32 = True
+              torch.backends.cudnn.allow_tf32 = True
+
+              A = torch.randn((matrix_size, matrix_size), device=device, dtype=torch.float32)
+              B = torch.randn((matrix_size, matrix_size), device=device, dtype=torch.float32)
+
+              print("Warmup started...")
+              for _ in range(warmup_steps):
+                  C = torch.matmul(A, B)
+                  torch.cuda.synchronize()
+
+              torch.cuda.reset_peak_memory_stats()
+              print("Benchmark started...")
+
+              step_times = []
+              steps = 0
+              start_total = time.perf_counter()
+
+              while True:
+                  now = time.perf_counter()
+                  if now - start_total >= duration_sec:
+                      break
+
+                  start = time.perf_counter()
+                  C = torch.matmul(A, B)
+                  torch.cuda.synchronize()
+                  end = time.perf_counter()
+
+                  step_time = end - start
+                  step_times.append(step_time)
+                  steps += 1
+
+                  if steps % 20 == 0:
+                      elapsed = time.perf_counter() - start_total
+                      print(f"pod={pod_name}, step={steps}, elapsed_sec={elapsed:.1f}, last_step_sec={step_time:.6f}", flush=True)
+
+              total_time = time.perf_counter() - start_total
+              peak_mem_gb = torch.cuda.max_memory_allocated() / 1024**3
+
+              print("=" * 70)
+              print("Benchmark results")
+              print("=" * 70)
+              print(f"pod_name           : {pod_name}")
+              print(f"steps              : {steps}")
+              print(f"total_time_sec     : {total_time:.6f}")
+              print(f"avg_step_sec       : {statistics.mean(step_times):.6f}")
+              print(f"min_step_sec       : {min(step_times):.6f}")
+              print(f"max_step_sec       : {max(step_times):.6f}")
+              print(f"median_step_sec    : {statistics.median(step_times):.6f}")
+              print(f"peak_cuda_mem_gb   : {peak_mem_gb:.3f}")
+              print("=" * 70)
+          env:
+            - name: MATRIX_SIZE
+              value: "8192"
+            - name: DURATION_SEC
+              value: "300"
+            - name: WARMUP_STEPS
+              value: "10"
+          resources:
+            limits:
+              cpu: "4"
+              memory: 10Gi
+              nvidia.com/gpu.shared: "1"
+            requests:
+              cpu: "1"
+              memory: 6Gi
+              nvidia.com/gpu.shared: "1"
